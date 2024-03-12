@@ -1,11 +1,3 @@
-// import { configureStore } from "@reduxjs/toolkit";
-// import cartReducer from './modules/exemploSlice/exemploSlice'
-// export const store = configureStore({
-//     reducer : {
-//         cart : cartReducer
-//     }
-// })
-
 import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
