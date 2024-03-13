@@ -2,8 +2,11 @@
 import React from "react";
 import { Provider } from 'react-redux';
 import { store } from "./store";
+import { QueryClient, QueryClientProvider } from 'react-query'
+export const queryClient = new QueryClient();
+
 const ReduxProvider = ({ children }) => {
-  return <Provider store={store}> {children} </Provider>;
+  return   <QueryClientProvider client={queryClient}> <Provider store={store}> {children} </Provider></QueryClientProvider>;
 };
 
 export default ReduxProvider;
